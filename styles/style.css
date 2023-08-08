@@ -25,6 +25,7 @@ body{
     background-color: #000000be;
     user-select: none;
     user-zoom: none;
+    overflow: hidden;
 }
 .personality{
     width: 350px;
