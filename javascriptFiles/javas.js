@@ -2,6 +2,7 @@ const botMasgs = document.querySelector('textarea');
 const sendMasgsBtn = document.querySelector('button');
 const myMasg = document.querySelector('input');
 const face = document.querySelector('.laps');
+const en = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 function checkMasgs(arr,word){
     return arr.value.indexOf(word,0)
@@ -23,6 +24,22 @@ sendMasgsBtn.addEventListener('click',()=>{
         botMasgs.value += 'با من حرف نزن ): \n \n'
         botMasgs.scrollTop +=100
         return
+    }
+    for (let index = 0; index < en.length; index++) {
+        if(myMasg.value[0] === en[index]){
+            face.classList.add('sad')
+            botMasgs.value += 'انگلیسی حرف نزن): \n \n'
+            botMasgs.scrollTop +=100
+            return  
+        }
+        if(myMasg.value[0] === en[index].toUpperCase()){
+            face.classList.add('sad')
+            botMasgs.value += 'انگلیسی حرف نزن): \n \n'
+            botMasgs.scrollTop +=100
+            return  
+        }else{
+            hasLetteren = false
+        }
     }
     if(checkMasgs(myMasg,'سلام') !== 0){
         if(!hi){
