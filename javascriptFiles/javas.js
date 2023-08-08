@@ -37,7 +37,7 @@ sendMasgsBtn.addEventListener('click',()=>{
         botMasgs.scrollTop +=100
         hi = true
     }else if(checkMasgs(myMasg,'سلام') !== -1 && checkMasgs(myMasg,'خوبی') !== -1){
-        botMasgs.value += 'سلام تو چطوری\n \n'
+        botMasgs.value += 'سلام تو خوبی\n \n'
         botMasgs.scrollTop +=100
         hi = true
     }else if(checkMasgs(myMasg,'سلام') !== -1){
@@ -131,5 +131,3 @@ sendMasgsBtn.addEventListener('click',()=>{
         return
     }
 })
-
-setInterval()
